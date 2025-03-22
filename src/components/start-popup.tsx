@@ -42,7 +42,7 @@ export function StartPopup() {
 
   const Content = (
     <div className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-lightest to-primary-light opacity-50" />
 
       <div className="relative space-y-6 p-6">
         {showCloseButton && (
@@ -51,7 +51,7 @@ export function StartPopup() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               onClick={() => setOpen(false)}
-              className="absolute top-2 right-2 p-1.5 rounded-full hover:bg-blue-100 text-blue-400 hover:text-blue-600 transition-colors"
+              className="absolute top-2 right-2 p-1.5 rounded-full hover:bg-primary-light text-primary hover:text-primary-dark transition-colors"
             >
               <X className="w-4 h-4" />
             </motion.button>
@@ -62,13 +62,13 @@ export function StartPopup() {
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium"
+            className="inline-flex items-center gap-2 bg-primary-light text-primary-dark px-4 py-1 rounded-full text-sm font-medium"
           >
             <Anchor className="w-4 h-4" />
             Exclusive Cruise Deals
           </motion.div>
 
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 text-transparent bg-clip-text">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-primary-dark to-primary-darkest text-transparent bg-clip-text">
             Save Up To 65% On {cruiseLine} Cruises
           </h2>
         </div>
@@ -89,12 +89,14 @@ export function StartPopup() {
         <div className="bg-white p-4 rounded-xl shadow-sm space-y-4">
           <div className="flex items-center justify-between border-b border-gray-100 pb-3">
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-blue-600" />
+              <Clock className="w-4 h-4 text-primary-dark" />
               <span className="text-sm font-medium text-gray-600">
                 24/7 Cruise Experts
               </span>
             </div>
-            <div className="text-sm font-medium text-blue-600">Book Now</div>
+            <div className="text-sm font-medium text-primary-dark">
+              Book Now
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -109,7 +111,7 @@ export function StartPopup() {
 
             <a href={`tel:${siteConfig.contact.phone.value}`}>
               <Button
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg shadow-blue-100"
+                className="w-full bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary-dark text-white shadow-lg shadow-primary-light"
                 size="lg"
               >
                 <Phone className="w-5 h-5 mr-2 animate-pulse" />
@@ -133,7 +135,7 @@ export function StartPopup() {
               transition={{ delay: index * 0.1 }}
               className="flex items-center gap-2"
             >
-              <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+              <div className="w-1.5 h-1.5 rounded-full bg-primary-dark" />
               <span className="text-gray-600">{text}</span>
             </motion.div>
           ))}

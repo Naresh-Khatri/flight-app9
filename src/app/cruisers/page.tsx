@@ -48,7 +48,10 @@ export default async function CruisersPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <CardTitle className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
+                  <CardTitle
+                    className="text-xl font-semibold mb-2 group-hover:text-primary
+                    transition-colors"
+                  >
                     {cruiser.name}
                   </CardTitle>
                   <p className="text-gray-600 line-clamp-2">
@@ -76,7 +79,8 @@ export default async function CruisersPage() {
                   </div>
                   <Button
                     variant="ghost"
-                    className="group-hover:text-blue-600 group-hover:bg-blue-50"
+                    className="group-hover:text-primary
+                    group-hover:bg-primary-lightest"
                   >
                     View Details
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
@@ -89,7 +93,7 @@ export default async function CruisersPage() {
       </section>
 
       {/* Additional Info Section */}
-      <section className="mt-12 bg-blue-50 rounded-xl p-8">
+      <section className="mt-12 bg-primary-lightest rounded-xl p-8">
         <div className="text-center space-y-4">
           <h2 className="text-2xl font-bold">Need Help Choosing?</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -97,7 +101,11 @@ export default async function CruisersPage() {
             package. Get personalized recommendations and the best available
             deals.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <Button
+            size="lg"
+            className="bg-primary
+          hover:bg-primary-dark"
+          >
             Contact an Expert
           </Button>
         </div>

@@ -92,14 +92,14 @@ export default function CruiserPage() {
 
             <motion.h1
               variants={heroVariants}
-              className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-100"
+              className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-primary-light"
             >
               {cruiser.name}
             </motion.h1>
 
             <motion.p
               variants={heroVariants}
-              className="text-xl text-blue-50/90"
+              className="text-xl text-primary-lightest/90"
             >
               {cruiser.description}
             </motion.p>
@@ -110,7 +110,7 @@ export default function CruiserPage() {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary-darkest text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
                 asChild
               >
                 <a href={`tel:${siteConfig.contact.phone.value}`}>
@@ -121,7 +121,7 @@ export default function CruiserPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-blue-600/10 border-2 border-blue-200/50 text-blue-100 hover:bg-blue-600/20 hover:border-blue-200/80 backdrop-blur-sm transition-all duration-300 group"
+                className="bg-primary/10 border-2 border-primary-lighter/50 text-primary-light hover:bg-primary/20 hover:border-primary-lighter/80 backdrop-blur-sm transition-all duration-300 group"
               >
                 View Fleet
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -133,10 +133,10 @@ export default function CruiserPage() {
       {/* Call Us Banners */}
       <div className="container mx-auto pt-12 px-0">
         <div className="grid md:grid-cols-2 gap-8 -mt-12 relative z-10">
-          <Card className="bg-gradient-to-r from-blue-50 to-blue-100">
+          <Card className="bg-gradient-to-r from-primary-lightest to-primary-light">
             <CardContent className="p-8 flex items-center gap-6">
               <div className="bg-white p-4 rounded-full">
-                <Phone className="w-8 h-8 text-blue-600" />
+                <Phone className="w-8 h-8 text-primary" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Book by Phone</h3>
@@ -145,7 +145,7 @@ export default function CruiserPage() {
                 </p>
                 <Button
                   variant="link"
-                  className="text-2xl font-bold text-blue-600 p-0 h-auto hover:no-underline"
+                  className="text-2xl font-bold text-primary p-0 h-auto hover:no-underline"
                   asChild
                 >
                   <a href={`tel:${siteConfig.contact.phone.value}`}>
@@ -180,10 +180,10 @@ export default function CruiserPage() {
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <FadeIn>
-          <Card className="bg-blue-50">
+          <Card className="bg-primary-lightest">
             <CardContent className="p-6 text-center">
-              <Ship className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-blue-600">
+              <Ship className="w-8 h-8 text-primary mx-auto mb-2" />
+              <div className="text-2xl font-bold text-primary">
                 {cruiser.shipCount}
               </div>
               <div className="text-sm text-gray-600">Ships</div>
@@ -235,11 +235,11 @@ export default function CruiserPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center gap-2">
-                <Building className="w-5 h-5 text-blue-600" />
+                <Building className="w-5 h-5 text-primary" />
                 <span>Founded: {cruiser.founded}</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-blue-600" />
+                <MapPin className="w-5 h-5 text-primary" />
                 <span>Headquarters: {cruiser.headquarters}</span>
               </div>
             </CardContent>
@@ -256,7 +256,7 @@ export default function CruiserPage() {
                   <FadeIn key={index} delay={index * 0.1}>
                     <div className="p-4 bg-gray-50 rounded-lg space-y-3">
                       <div className="flex items-center gap-2">
-                        <Ship className="w-5 h-5 text-blue-600" />
+                        <Ship className="w-5 h-5 text-primary" />
                         <h3 className="font-semibold">{ship.name}</h3>
                       </div>
                       <p>Capacity: {ship.capacity} passengers</p>
@@ -346,7 +346,7 @@ export default function CruiserPage() {
             <CardContent className="space-y-3">
               {cruiser.features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <Anchor className="w-4 h-4 text-blue-600" />
+                  <Anchor className="w-4 h-4 text-primary" />
                   <span className="text-sm">{feature}</span>
                 </div>
               ))}
@@ -355,7 +355,7 @@ export default function CruiserPage() {
         </div>
       </div>
       {/* Final CTA Section */}
-      <section className="bg-blue-50 rounded-xl p-8">
+      <section className="bg-primary-lightest rounded-xl p-8">
         <div className="text-center space-y-4">
           <h2 className="text-2xl font-bold">
             Ready to Book with {cruiser.name}?
@@ -365,7 +365,11 @@ export default function CruiserPage() {
             {cruiser.name}. Get personalized recommendations and the best
             available deals.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary-dark"
+            asChild
+          >
             <a href={`tel:${siteConfig.contact.phone.value}`}>
               <Phone className="w-4 h-4 mr-2" />
               Call {siteConfig.contact.phone.display}

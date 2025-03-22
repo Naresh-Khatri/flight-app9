@@ -104,20 +104,20 @@ export default function DestinationPage() {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <div className="absolute inset-0 blur-2xl bg-blue-500/30 rounded-full" />
+              <div className="absolute inset-0 blur-2xl bg-primary/30 rounded-full" />
               <DestinationIcon className="w-16 h-16 mx-auto relative" />
             </motion.div>
 
             <motion.h1
               variants={heroVariants}
-              className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white"
+              className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-primary-lighter to-white"
             >
               {destination.name}
             </motion.h1>
 
             <motion.p
               variants={heroVariants}
-              className="text-xl max-w-2xl mx-auto text-blue-50/90"
+              className="text-xl max-w-2xl mx-auto text-primary-lightest/90"
             >
               {destination.description}
             </motion.p>
@@ -127,10 +127,10 @@ export default function DestinationPage() {
 
       {/* Call Us Banners */}
       <div className="grid md:grid-cols-2 gap-8 mt-12">
-        <Card className="bg-gradient-to-r from-blue-50 to-blue-100">
+        <Card className="bg-gradient-to-r from-primary-lightest to-primary-lighter">
           <CardContent className="p-8 flex items-center gap-6">
             <div className="bg-white p-4 rounded-full">
-              <Phone className="w-8 h-8 text-blue-600" />
+              <Phone className="w-8 h-8 text-primary" />
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Book by Phone</h3>
@@ -139,7 +139,7 @@ export default function DestinationPage() {
               </p>
               <Button
                 variant="link"
-                className="text-2xl font-bold text-blue-600 p-0 h-auto hover:no-underline"
+                className="text-2xl font-bold text-primary p-0 h-auto hover:no-underline"
                 asChild
               >
                 <a href={`tel:${siteConfig.contact.phone.value}`}>
@@ -181,7 +181,7 @@ export default function DestinationPage() {
               {destination.highlights.map((highlight, index) => (
                 <FadeIn key={index} delay={index * 0.1}>
                   <div className="flex items-start gap-2">
-                    <ListChecks className="w-5 h-5 text-blue-600 mt-1" />
+                    <ListChecks className="w-5 h-5 text-primary mt-1" />
                     <span>{highlight}</span>
                   </div>
                 </FadeIn>
@@ -193,7 +193,7 @@ export default function DestinationPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {destination.popularPorts.map((port, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-blue-600" />
+                    <MapPin className="w-4 h-4 text-primary" />
                     <span>{port}</span>
                   </div>
                 ))}
@@ -223,7 +223,7 @@ export default function DestinationPage() {
           <Card>
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-blue-600" />
+                <Calendar className="w-5 h-5 text-primary" />
                 <span>Duration: {destination.duration}</span>
               </div>
               <div className="flex items-center gap-2">
@@ -267,7 +267,7 @@ export default function DestinationPage() {
       </div>
 
       {/* Final CTA Section */}
-      <section className="bg-blue-50 rounded-xl p-8">
+      <section className="bg-primary-lightest rounded-xl p-8">
         <div className="text-center space-y-4">
           <h2 className="text-2xl font-bold">
             Ready to Explore {destination.name}?
@@ -277,7 +277,11 @@ export default function DestinationPage() {
             cruise experience. Get personalized recommendations and the best
             available deals.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary-dark"
+            asChild
+          >
             <a href={`tel:${siteConfig.contact.phone.value}`}>
               <Phone className="w-4 h-4 mr-2" />
               Call {siteConfig.contact.phone.display}
@@ -288,4 +292,3 @@ export default function DestinationPage() {
     </main>
   );
 }
-
